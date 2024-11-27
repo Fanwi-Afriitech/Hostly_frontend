@@ -1,4 +1,5 @@
-Container styling to align items in a row
+
+/* Container styling to align items in a row */
 .row {
     display: flex;                
     align-items: center;          /* Align elements vertically */
@@ -29,7 +30,20 @@ Container styling to align items in a row
 /* Add padding, box-shadow or border to differentiate elements visually if needed */
 .bs {
     padding: 20px;
-    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.1);
-    background-color: #f8f8f8; /* Light background for the container */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    background-color: #f8f8f8;    /* Light background for the container */
     border-radius: 8px;
+    
+}
+.mySwiper .swiper-slide img {
+    width: 400px;  /* Adjusts the width to take the full width of the container */
+    height: 500px; /* Sets a fixed height, you can adjust this as needed */
+    /* object-fit: cover; */
+    margin-top: 100px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+.rch{
+    display: flex;
+    flex-wrap: nowrap;
 }

@@ -1,5 +1,9 @@
 .navbar{
     background-color: black;
+    position: fixed;    /* Fix position to the top of the page */
+    top: 0;             /* Set the top edge at 0 distance from the viewport top */
+    width: 100%;        /* Ensure the navbar spans the full width */
+    z-index: 1000; 
 }
 .nav-link{
     color: white !important;
@@ -11,6 +15,7 @@
 .navbar-nav{
     margin-left: auto;
     margin-right: 50px;
+    position: sticky !important;
 }
 .h-font{
     font-family: "Merienda", cursive;

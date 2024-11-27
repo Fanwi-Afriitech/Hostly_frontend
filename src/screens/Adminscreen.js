@@ -8,7 +8,7 @@ import { Tabs } from 'antd';
 const Adminscreen = () => {
 
     if (JSON.parse(localStorage.getItem('currentUser')).isAdmin) {
-        window.location.href('/home')
+        window.location.href ='/home'
     }
     const tabItems = [
         {
@@ -278,18 +278,24 @@ export function Addroom() {
         try {
 
             const result = await axios.post('http://localhost:5000/api/rooms/addroom', newroom)
+           
             console.log(result.data)
+            
 
 
         } catch (error) {
             console.log(error)
+            if (error.response) {
+                console.log("Response Data:", error.response.data);
+                console.log("Status Code:", error.response.status);
+                console.log("Headers:", error.response.headers);
+            }
+            
         }
 
     }
 
     return (
-
-
 
         // </div>
         <div className="room-form-container row">
@@ -307,9 +313,10 @@ export function Addroom() {
                 <input type='text' className='form-control' placeholder='Description'
                     value={description} onChange={(e) => { setdescription(e.target.value) }}
                 />
-                <input type='text' className='form-control' placeholder='Phone Number'
+                 <input type='text' className='form-control' placeholder='phonenumber'
                     value={phonenumber} onChange={(e) => { setphonenumber(e.target.value) }}
                 />
+                
             </div>
             <div className='col-md-5'>
                 <input type='text' className='form-control' placeholder='Type'
