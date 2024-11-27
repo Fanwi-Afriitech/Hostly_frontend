@@ -23,7 +23,7 @@ function App() {
      <Routes>
       
        <Route path="/home" element={<Homescreen />} />
-       <Route path="/homepage" element={<Home />} />
+       <Route path="/" element={<Home />} />
        
        <Route path="/book/:roomid/:fromdate/:todate" element={<Bookingscreen/>} />
        <Route path="/login" element={<Loginscreen/>} />
